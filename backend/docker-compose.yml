@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    volumes:
+      - workflow-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: camunda
+volumes:
+  workflow-mysql-data:

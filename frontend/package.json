@@ -1,0 +1,27 @@
+{
+  "name": "next-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.18.2",
+    "antd": "^5.12.5",
+    "axios": "^1.6.3",
+    "moment": "^2.30.1",
+    "next": "14.0.4",
+    "node-html-parser": "^6.1.12",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  }
+}
