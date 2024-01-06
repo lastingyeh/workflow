@@ -22,14 +22,14 @@ export interface Task {
 }
 
 export interface HistoryInstanceTaskList {
-  id: string;
-  processDefinitionId: string;
-  processDefinitionName: string;
-  processDefinitionVersion: number;
+  id?: string;
+  processDefinitionId?: string;
+  processDefinitionName?: string;
+  processDefinitionVersion?: number;
   startTime: Date;
   endTime: Date;
-  rootProcessInstanceId: string;
-  state: string;
+  rootProcessInstanceId?: string;
+  state?: string;
   tasks: HistoryInstanceTask[];
 }
 

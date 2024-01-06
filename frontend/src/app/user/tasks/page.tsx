@@ -6,7 +6,7 @@ import { Divider, Layout, Space, theme } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { getTasksByProcessId } from '@/app/service/taskService';
 import { PROCESS_ID } from '@/app/util/const';
-import { HistoryTask, Task } from '@/app/util/type';
+import {  Task } from '@/app/util/type';
 import TableComponent from '../../component/TableComponent';
 import ModalForm from '../../component/ModalForm';
 import MenuComponent from '@/app/component/MenuComponent';
@@ -24,7 +24,7 @@ const TasksPage = () => {
   const [userTasks, setUserTasks] = useState<Task[]>();
   const [selectedTask, setSelectedTask] = useState<Task>();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [historyTasks, setHistoryTasks] = useState<HistoryTask[]>([]);
+
 
   useEffect(() => {
     getTasksByProcessId(processId)
