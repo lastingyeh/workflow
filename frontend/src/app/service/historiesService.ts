@@ -1,33 +1,33 @@
 import axios from 'axios';
 import { HEADERS } from '../util/const';
-import { HistoryInstanceTask } from '../util/type';
+import { HistoryInstanceTaskList, HistoryInstanceTask } from '../util/type';
 
 export const getHistoryProcessInstanceList = async (): Promise<
-	HistoryInstanceTask[]
+  HistoryInstanceTaskList[]
 > => {
-	const queryParams = new URLSearchParams();
+  const queryParams = new URLSearchParams();
 
-	queryParams.append('sortBy', 'startTime');
-	queryParams.append('sortOrder', 'desc');
-	queryParams.append('maxResults', '5');
+  queryParams.append('sortBy', 'startTime');
+  queryParams.append('sortOrder', 'desc');
+  queryParams.append('maxResults', '5');
 
-	const apiPath = `/history/process-instance?${queryParams}`;
+  const apiPath = `/history/process-instance?${queryParams}`;
 
-	const res = await axios.get(apiPath, { headers: HEADERS });
+  const res = await axios.get(apiPath, { headers: HEADERS });
 
-	return res?.data as HistoryInstanceTask[];
+  return res?.data as HistoryInstanceTaskList[];
 };
 
 export const getHistoryInstanceTaskList = async (
-	processInstanceId: string
+  processInstanceId: string
 ): Promise<HistoryInstanceTask[]> => {
-	const queryParams = new URLSearchParams();
+  const queryParams = new URLSearchParams();
 
-	queryParams.append('processInstanceId', processInstanceId);
+  queryParams.append('processInstanceId', processInstanceId);
 
-	const apiPath = `/history/task?${queryParams}`;
+  const apiPath = `/history/task?${queryParams}`;
 
-	const res = await axios.get(apiPath, { headers: HEADERS });
+  const res = await axios.get(apiPath, { headers: HEADERS });
 
-	return res?.data as HistoryInstanceTask[];
+  return res?.data as HistoryInstanceTask[];
 };
