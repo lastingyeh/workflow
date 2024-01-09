@@ -1,0 +1,19 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "playwright testing platform poc",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "record": "npx playwright codegen",
+    "report": "npx playwright show-report"
+  },
+  "author": "chrisyeh",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.5"
+  }
+}

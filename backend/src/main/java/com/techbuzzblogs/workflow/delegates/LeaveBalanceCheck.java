@@ -15,8 +15,6 @@ public class LeaveBalanceCheck implements JavaDelegate {
     public void execute(DelegateExecution delegateExecution) throws Exception {
         if (LEAVE_BALANCE > 0) {
             logger.info("Employee have Leave Balance!!!");
-        } else {
-            logger.error("Employee don't have Leave Balance!!!");
         }
     }
 }

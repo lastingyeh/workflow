@@ -1,5 +1,6 @@
 import React from 'react';
-import { SendOutlined } from '@ant-design/icons';
+import Image from 'next/image';
+import { SendOutlined,UserAddOutlined } from '@ant-design/icons';
 import { Avatar, Card, Button, Typography } from 'antd';
 import { ProcessDefinition } from '../util/type';
 const { Text, Link } = Typography;
@@ -14,11 +15,14 @@ const CardComponent = ({
   process: ProcessDefinition;
 }) => (
   <Card
-    style={{ width: 300 }}
+    style={{ width: '300' }}
     cover={
-      <img
-        alt='example'
-        src='https://play-lh.googleusercontent.com/c8m9zkr7QxrUevntW4nfMQ5jZEUyYOugj2cOKgWQddhS1XcVS4NwrW1-d7m_NwOmyAI'
+      <Image
+        src='/process.jpeg'
+        alt='process'
+        width='120'
+        height='250'
+        priority
       />
     }
     actions={[
@@ -34,7 +38,7 @@ const CardComponent = ({
   >
     <Meta
       avatar={
-        <Avatar src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToK_-LT9HmxfBNTsC0A8wfvjtfxKh3GjexbQ&usqp=CAU' />
+        <Avatar icon={<UserAddOutlined/>} />
       }
       title={<Text strong>Create process</Text>}
       description={<Text type='secondary'>{process.name}</Text>}

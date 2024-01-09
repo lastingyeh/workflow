@@ -1,0 +1,125 @@
+{
+  "config": {
+    "configFile": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/playwright.config.ts",
+    "rootDir": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "on-failure"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/create-process.test.ts"
+        ],
+        "timeout": 0
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.40.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests/create-process.test.ts",
+      "file": "tests/create-process.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 73636,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[ \u001b[32m''\u001b[39m ]\n"
+                    },
+                    {
+                      "text": "test completed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-01-09T08:09:43.787Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/test-results/tests-create-process-test/video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5be1ca9eea3b0e9f9d8a-9f2199d345a0e0891767",
+          "file": "tests/create-process.test.ts",
+          "line": 31,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-01-09T08:09:43.270Z",
+    "duration": 94559.167,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

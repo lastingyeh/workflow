@@ -17,6 +17,13 @@
 - Implement User-task form
 - Display Instance tasks histories
 
+## testing features
+
+- Playwright e2e test
+- Trigger Process using message
+- Implement External-task
+- Testing report / video / codegen
+
 ## Interact with Camunda APIs
 
 - [Process-Definition APIs](https://docs.camunda.org/rest/camunda-bpm-platform/7.20/#tag/Process-Definition)

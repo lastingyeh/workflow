@@ -2,8 +2,6 @@ import { Steps } from 'antd';
 import { HistoryInstanceTask } from '../util/type';
 import moment from 'moment';
 
-const description = 'This is a description.';
-
 const StepsComponent = ({
   startAt,
   endAt,

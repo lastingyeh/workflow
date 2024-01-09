@@ -1,8 +1,9 @@
 import React from 'react';
-import { Avatar, List,Typography } from 'antd';
+import { Avatar, List, Typography } from 'antd';
+import { AccountBookOutlined } from '@ant-design/icons';
 import { ProcessDefinition } from '../util/type';
 
-const {Text} = Typography
+const { Text } = Typography;
 
 const ProcessList = ({
   processDefinitionList,
@@ -12,6 +13,7 @@ const ProcessList = ({
   setProcess: (processName: ProcessDefinition) => void;
 }) => (
   <List
+  style={{marginLeft:'20px'}}
     itemLayout='horizontal'
     dataSource={processDefinitionList}
     renderItem={(item, index) => (
@@ -21,13 +23,7 @@ const ProcessList = ({
         }}
       >
         <List.Item.Meta
-          avatar={
-            <Avatar
-              src={
-                'https://static.commerce.aws.flender.cloud/sys-master/haf/h88/9454335524894.png'
-              }
-            />
-          }
+          avatar={<Avatar icon={<AccountBookOutlined size={2} />} />}
           title={
             <a
               href='#'
@@ -38,7 +34,7 @@ const ProcessList = ({
               {item.name}
             </a>
           }
-          description={<Text type="secondary">version: {item.version}</Text>}
+          description={<Text type='secondary'>version: {item.version}</Text>}
         />
       </List.Item>
     )}

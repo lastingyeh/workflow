@@ -25,33 +25,15 @@ const HistoriesList = () => {
           instanceList.map((instance) =>
             getHistoryInstanceTaskList(instance.id)
           )
-        ).then((data) => ({
-          instanceList,
-          instanceTaskList: data,
-        }));
+        ).then((instanceTaskList) => {
+          return instanceTaskList.map((taskList, idx) => ({
+            ...instanceList[idx],
+            tasks: instanceTaskList[idx],
+          }));
+        });
       })
-      .then(({ instanceList, instanceTaskList }) => {
-        const tmpInstanceTaskList = instanceTaskList.map((instanceTaskList) => {
-          return {
-            id: instanceTaskList[0].processInstanceId,
-            tasks: instanceTaskList,
-          };
-        });
-
-        const tempHistoryInstanceTaskList: HistoryInstanceTaskList[] = [];
-
-        tmpInstanceTaskList.forEach((tTaskList) => {
-          const idx = instanceList.findIndex((x) => x.id === tTaskList.id);
-
-          if (idx > -1) {
-            tempHistoryInstanceTaskList.push({
-              ...instanceList[idx],
-              tasks: tTaskList.tasks,
-            });
-          }
-        });
-
-        setHistoryInstanceTaskList(tempHistoryInstanceTaskList);
+      .then((data) => {
+        setHistoryInstanceTaskList(data);
       })
       .catch((err) => {
         console.log(err);
@@ -63,7 +45,7 @@ const HistoriesList = () => {
       itemLayout='horizontal'
       dataSource={historyInstanceTaskList}
       renderItem={(item, index) => (
-        <List.Item>
+        <List.Item key={index}>
           <List.Item.Meta
             avatar={
               <Avatar
@@ -74,11 +56,11 @@ const HistoriesList = () => {
               />
             }
             title={
-              <Title level={4}>
-                <Link href={`/user/tasks?processId=${item.id}`}>
+              <Link href={`/user/tasks?processId=${item.id}`}>
+                <Title level={4} type='secondary'>
                   {item.processDefinitionName}{' '}
-                </Link>
-              </Title>
+                </Title>
+              </Link>
             }
             description={
               <div>
