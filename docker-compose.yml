@@ -1,17 +1,20 @@
 version: "3.7"
 
 services:
-  mysql:
-    image: mysql:5.7
+  postgresql:
+    image: postgres:16.1
     ports:
-      - 3306:3306
+      - 5432:5432
     volumes:
-      - workflow-mysql-data:/var/lib/mysql
+      - workflow-postgresql-data:/var/lib/postgresql/data
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: camunda
+      - POSTGRES_DB=camunda
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST_AUTH_METHOD=trust
     healthcheck:
-      test: ["CMD", "echo" , ">/dev/tcp/localhost/3306"]
+      test:
+        - CMD-SHELL
+        - pg_isready -U $${POSTGRES_USER}
       interval: 5s
       timeout: 5s
       retries: 5
@@ -21,7 +24,7 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - mysql
+      - postgresql
 
   frontedn:
     image: philipz/workflow-frontend:20-alpine
@@ -31,4 +34,4 @@ services:
       - camunda
 
 volumes:
-  workflow-mysql-data:
+  workflow-postgresql-data:
