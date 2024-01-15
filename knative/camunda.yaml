@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: camunda
+  namespace: camunda
+spec:
+  template:
+    metadata:
+      name: camunda-7.20-redis
+      annotations:
+        autoscaling.knative.dev/minScale: "2"
+    spec:
+      containers:
+        - image: philipz/workflow-backend:7.20-redis
