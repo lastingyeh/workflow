@@ -1,4 +1,4 @@
-export const URL = 'http://camunda.camunda.127.0.0.1.sslip.io/engine-rest';
+export const URL = 'http://localhost:8080/engine-rest';
 
 export const HEADERS = {
   'Content-Type': 'application/json',
