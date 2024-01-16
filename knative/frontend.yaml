@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: frontend
+  namespace: camunda
+spec:
+  template:
+    metadata:
+      name: frontend-v1
+    spec:
+      containers:
+        - image: philipz/knative-frontend:20-alpine
+          ports:
+            - containerPort: 3000
