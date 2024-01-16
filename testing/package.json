@@ -12,9 +12,12 @@
   "author": "chrisyeh",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.40.1"
+    "@playwright/test": "^1.40.1",
+    "@types/ssh2": "^1.11.18",
+    "ssh2": "^1.15.0"
   },
   "dependencies": {
-    "axios": "^1.6.5"
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1"
   }
 }

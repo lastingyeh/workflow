@@ -10,7 +10,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testMatch: ['tests/create-process.test.ts'],
+  testMatch: ['tests/ssh.test.ts'],
   use: {
     headless: false,
     screenshot: 'on',

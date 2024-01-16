@@ -47,31 +47,31 @@
         "testDir": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing",
         "testIgnore": [],
         "testMatch": [
-          "tests/create-process.test.ts"
+          "tests/ssh.test.ts"
         ],
-        "timeout": 30000
+        "timeout": 0
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.40.1",
-    "workers": 4,
+    "workers": 1,
     "webServer": null
   },
   "suites": [
     {
-      "title": "tests/create-process.test.ts",
-      "file": "tests/create-process.test.ts",
+      "title": "tests/ssh.test.ts",
+      "file": "tests/ssh.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "test",
+          "title": "ssh test",
           "ok": true,
           "tags": [],
           "tests": [
             {
-              "timeout": 30000,
+              "timeout": 0,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -80,27 +80,35 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 10787,
+                  "duration": 586,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "title:  Promise { \u001b[36m<pending>\u001b[39m }\n"
+                      "text": "Connected via SSH!\n"
                     },
                     {
-                      "text": "[ \u001b[32m''\u001b[39m ]\n"
+                      "text": "STDOUT: Fri Dec 11 08:30:00 CST 2020\n\n"
                     },
                     {
-                      "text": "test completed\n"
+                      "text": "test\n"
+                    },
+                    {
+                      "text": "STDOUT: Tue Jan 16 10:47:26 CST 2024\n\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-11T09:03:37.188Z",
+                  "startTime": "2024-01-16T02:47:19.307Z",
                   "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/test-results/tests-ssh-ssh-test/test-finished-1.png"
+                    },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/test-results/tests-create-process-test/video.webm"
+                      "path": "/Users/cfh00543956/Desktop/Learning/POC/camunda/workflow/testing/test-results/tests-ssh-ssh-test/video.webm"
                     }
                   ]
                 }
@@ -108,9 +116,9 @@
               "status": "expected"
             }
           ],
-          "id": "5be1ca9eea3b0e9f9d8a-9f2199d345a0e0891767",
-          "file": "tests/create-process.test.ts",
-          "line": 31,
+          "id": "4af23cbf3571452297c4-3f833abb93d29e3a8501",
+          "file": "tests/ssh.test.ts",
+          "line": 18,
           "column": 5
         }
       ]
@@ -118,8 +126,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-11T09:03:36.934Z",
-    "duration": 11665.986,
+    "startTime": "2024-01-16T02:47:15.525Z",
+    "duration": 11401.099,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
