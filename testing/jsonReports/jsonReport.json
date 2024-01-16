@@ -49,13 +49,13 @@
         "testMatch": [
           "tests/create-process.test.ts"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.40.1",
-    "workers": 1,
+    "workers": 4,
     "webServer": null
   },
   "suites": [
@@ -71,7 +71,7 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 0,
+              "timeout": 30000,
               "annotations": [],
               "expectedStatus": "passed",
               "projectId": "",
@@ -80,9 +80,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 73636,
+                  "duration": 10787,
                   "errors": [],
                   "stdout": [
+                    {
+                      "text": "title:  Promise { \u001b[36m<pending>\u001b[39m }\n"
+                    },
                     {
                       "text": "[ \u001b[32m''\u001b[39m ]\n"
                     },
@@ -92,7 +95,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-01-09T08:09:43.787Z",
+                  "startTime": "2024-01-11T09:03:37.188Z",
                   "attachments": [
                     {
                       "name": "video",
@@ -115,8 +118,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-01-09T08:09:43.270Z",
-    "duration": 94559.167,
+    "startTime": "2024-01-11T09:03:36.934Z",
+    "duration": 11665.986,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

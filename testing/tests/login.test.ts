@@ -1,6 +1,4 @@
-import axios from 'axios';
 import { test, chromium } from '@playwright/test';
-import { ExternalTask } from '../util/type';
 
 const baseUrl = 'http://localhost:8080/engine-rest';
 const workerSettings = {

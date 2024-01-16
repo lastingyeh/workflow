@@ -30,6 +30,17 @@ test.beforeAll('publish', async () => {
 
 test('test', async ({ page }) => {
   await page.goto('http://localhost:3000/');
+
+  // check title
+  const title = page.title();
+
+  console.log('title: ', title);
+
+  const url = page.url();
+
+  await expect(page).toHaveTitle('Workflow')
+  await expect(page).toHaveURL('http://localhost:3000/');
+
   await page.hover("//a[contains(text(),'tasks-learning')]");
   await page.getByRole('link', { name: 'tasks-learning' }).click();
 

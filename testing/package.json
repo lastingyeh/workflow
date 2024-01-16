@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx playwright test",
     "record": "npx playwright codegen",
-    "report": "npx playwright show-report"
+    "report": "npx playwright show-report",
+    "trace": "npx playwright show-trace"
   },
   "author": "chrisyeh",
   "license": "ISC",
