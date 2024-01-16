@@ -26,5 +26,12 @@ services:
     depends_on:
       - postgresql
 
+  frontedn:
+    image: philipz/workflow-frontend:20-alpine
+    ports:
+      - 3000:3000
+    depends_on:
+      - camunda
+
 volumes:
   workflow-postgresql-data:
