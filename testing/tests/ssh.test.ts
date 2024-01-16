@@ -16,6 +16,7 @@ test.beforeAll(async () => {
 });
 
 test('ssh test', async ({ page }) => {
+  await page.waitForTimeout(2 * 1000);
   console.log('test');
 });
 
